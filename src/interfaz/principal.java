@@ -77,7 +77,27 @@ public class principal extends javax.swing.JFrame {
 
         jLabel5.setText("Porcentaje de la persona dos");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+
+        txtinversionuno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtinversionunoActionPerformed(evt);
+            }
+        });
+        txtinversionuno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtinversionunoKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtinversionuno, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 100, -1));
+
+        txtinversiondos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtinversiondosKeyTyped(evt);
+            }
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtinversiondosKeyPressed(evt);
+            }
+        });
         jPanel1.add(txtinversiondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 110, -1));
 
         txtporcentajeuno.setEditable(false);
@@ -132,6 +152,32 @@ public class principal extends javax.swing.JFrame {
            
             txtinversionuno.requestFocusInWindow();
     }//GEN-LAST:event_cmdborrarActionPerformed
+
+    private void txtinversionunoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinversionunoKeyTyped
+            char c=evt.getKeyChar();
+            
+            if (!Character.isDigit(c) && c != '.') {
+                getToolkit().beep();
+                evt.consume();
+        }
+    }//GEN-LAST:event_txtinversionunoKeyTyped
+
+    private void txtinversiondosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinversiondosKeyPressed
+
+    }//GEN-LAST:event_txtinversiondosKeyPressed
+
+    private void txtinversionunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinversionunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtinversionunoActionPerformed
+
+    private void txtinversiondosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinversiondosKeyTyped
+            char c=evt.getKeyChar();
+            
+            if (!Character.isDigit(c) && c != '.') {
+                getToolkit().beep();
+                evt.consume();
+        }
+    }//GEN-LAST:event_txtinversiondosKeyTyped
 
     /**
      * @param args the command line arguments
